@@ -179,6 +179,9 @@ function onMovieSubmit(eve) {
             movieForm.reset();
             onModelToggle()
 
+            snackbar("Movie added successfully!", "success");
+
+
         })
         .catch(err => snackbar("Something will happen while createing movieobj", 'error'))
         .finally(() => {
@@ -390,3 +393,4 @@ showModelbtn.addEventListener("click", onModelToggle);
 
 movieForm.addEventListener("submit", onMovieSubmit);
 updateMovieBtn.addEventListener("click", onMovieUpdate);
+
